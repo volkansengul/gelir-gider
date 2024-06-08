@@ -1,5 +1,5 @@
 # Giderlerim Uygulaması
-
+Mali durumunuzu takip etmenizi, gelir ve giderlerinizi yönetmenizi sağlar. 
 > NextJS (v.14), Redux ToolKit (v.2), Tailwind kullanılarak geliştirilmiştir.
 
 ## Kurulum & Çalıştırma
