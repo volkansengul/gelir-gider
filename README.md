@@ -56,8 +56,4 @@ npm start
 
 ### Galeri
 
-![Onboarding](https://raw.githubusercontent.com/volkansengul/gelir-gider/main/public/assets/screenshots/1.jpg)
-![Login](https://raw.githubusercontent.com/volkansengul/gelir-gider/main/public/assets/screenshots/2.jpg)
-![Dashboard](https://raw.githubusercontent.com/volkansengul/gelir-gider/main/public/assets/screenshots/3.jpg)
-![Debts](https://raw.githubusercontent.com/volkansengul/gelir-gider/main/public/assets/screenshots/4.jpg)
-![PaymentPlan](https://raw.githubusercontent.com/volkansengul/gelir-gider/main/public/assets/screenshots/5.jpg)
+![ScreenShots](https://raw.githubusercontent.com/volkansengul/gelir-gider/main/public/assets/screenshots/frame.jpg)
