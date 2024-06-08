@@ -38,7 +38,7 @@ const DashboardPage: React.FC = () => {
 	};
 	useEffect(() => {
 		getList();
-	}, [dispatch]);
+	}, []);
 
 	const total = {
 		debt: formatToTurkishLira(totalDebt),
@@ -80,7 +80,28 @@ const DashboardPage: React.FC = () => {
 				</div>
 			)}
 
-			{status === 'ready' && (
+			{status === 'ready' && list.length == 0 && (
+				<div
+					className={
+						'flex flex-col gap-3 items-center flex-1 justify-center'
+					}
+				>
+					<div
+						className={
+							'text-emerald-700 dark:text-emerald-500 w-3/5 text-center'
+						}
+					>
+						Harika ! henüz ödenmesi gereken bir borcunuz bulunmuyor.
+					</div>
+					<a href={'/debt/add'}>
+						<button className={'btn btn-primary'}>
+							Borç Oluştur
+						</button>
+					</a>
+				</div>
+			)}
+
+			{status === 'ready' && list.length > 0 && (
 				<>
 					<div
 						className={

@@ -12,7 +12,7 @@ const AddDebt: React.FC = () => {
 	};
 
 	return (
-		<div className='px-4 flex flex-1 flex-col'>
+		<div className='px-2 flex flex-1 flex-col'>
 			<Header title='Borç Oluştur' link='/debt' />
 			<div className='flex flex-1 items-center justify-center'>
 				<DebtForm onSuccess={handleSuccess} />
