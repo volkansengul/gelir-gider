@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: 0 0% 100%;
+	--foreground: 240 10% 3.9%;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 240 10% 3.9%;
+	}
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+a {
+	@apply text-emerald-500 hover:text-emerald-700 font-medium;
+}
+
+button {
+	@apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium px-4 py-2;
+}
+
+.container {
+	@apply max-w-md mx-auto flex flex-col flex-1 w-full select-none shadow-xl relative;
+	@apply bg-white dark:bg-zinc-900/30;
+}
+.modal {
+	z-index: 2;
+}
+.modalOpac {
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: 2;
+}
+.modalClose {
+	@apply absolute flex items-center justify-center bg-emerald-500;
+	width: 30px;
+	height: 30px;
+	top: -20px;
+	right: 10px;
+	font-size: 24px;
+	border-radius: 100%;
+	padding: 0;
+	z-index: 3;
+}
+
+.btn-circle {
+	border-radius: 100%;
+	width: 26px;
+	height: 26px;
+	font-size: 14px;
+	padding: 0;
+}
+.btn-circle-lg {
+	font-size: 22px;
+	width: 36px;
+	height: 36px;
+}
+.btn-primary {
+	@apply bg-emerald-600 text-white dark:text-black hover:bg-emerald-500;
+}
+.btn-outline {
+	@apply border border-emerald-700 text-emerald-500 hover:bg-emerald-950 hover:text-emerald-200;
+}
+.btn-dark {
+	@apply bg-zinc-300 text-black/50 dark:bg-zinc-800 dark:text-white/50;
+	@apply hover:text-emerald-500 hover:bg-zinc-600;
+}
+button[disabled] {
+	opacity: 0.5;
+	@apply bg-gray-500 hover:bg-gray-500;
+}
+
+form .formRow {
+	position: relative;
+}
+form .formRowBig {
+	@apply border border-white flex-1;
+	@apply text-gray-700 border-zinc-400 dark:bg-zinc-800 dark:border-zinc-600 dark:text-emerald-300;
+	border-radius: 8px;
+}
+
+form .formRow div {
+	position: relative;
+}
+form .formRow div.leftIcon input {
+	@apply pl-10;
+}
+form .formRow svg {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+	width: 20px;
+	height: 20px;
+	opacity: 0.5;
+	@apply fill-black dark:fill-white/50;
+}
+form label {
+	@apply block w-full mb-1 text-sm font-medium text-gray-900 dark:text-gray-300;
+}
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+	@apply w-full rounded-md p-2 text-sm border;
+	@apply text-gray-700 border-zinc-400 dark:bg-zinc-800 dark:border-zinc-600 dark:text-emerald-300;
+	outline: none;
+}
+input:read-only {
+	@apply border-l-0 border-t-0 border-r-0 !bg-transparent;
+	border-radius: 0;
+}
+
+input[type='text'].error,
+input[type='email'].error,
+input[type='password'].error {
+	@apply border-red-800;
+}
+form .formRow .error svg {
+	@apply fill-red-500 dark:fill-red-500;
+}
+form .formRow .error input {
+	@apply border-red-800;
+}
+form .errorMessage {
+	@apply text-red-500 text-xs mt-2;
+}
+
+.darkModeToggle {
+	@apply inline-flex ml-auto border rounded-lg py-1 absolute right-10 top-3;
+	@apply dark:border-zinc-800 dark:text-zinc-400;
+	border-radius: 18px;
+	transition: all;
+	transition-duration: 0.5s;
+	z-index: 1;
+}
+.logo {
+	@apply flex border border-emerald-500 items-center justify-center;
+	@apply bg-emerald-500/20 dark:bg-emerald-950;
+	border-radius: 100%;
+	width: 96px;
+	height: 96px;
+}
+.logo svg {
+	@apply fill-emerald-900 dark:fill-emerald-300;
+	width: 48px;
+}
+.scroll {
+	padding-right: 5px;
+}
+.scroll::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 16px;
+	@apply bg-zinc-100 dark:bg-zinc-800;
+}
+
+.scroll::-webkit-scrollbar {
+	width: 12px;
+	@apply bg-zinc-200 dark:bg-zinc-800;
+	border-radius: 16px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	@apply bg-zinc-200 dark:bg-zinc-600;
+}
